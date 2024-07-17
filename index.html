@@ -7,25 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+
+    <table border="2px" id="result">
+
+    </table>
     <script>
-//     let employee = [{
-//     'name': 'Anuj',
-//     'age': 20,
-//     designation: 'Lead Web Developer'
-// }, {
-//     'name': 'Akhil',
-//     'age': 25,
-//     designation: 'Jr. Web Developer',
-//     joining: '2022'
-// }];
-
-// for(let i = 0; i < employee.length; i++) {
-//     emp = employee[i];
-//     console.log(employee);
-// }
-
-
-
     let students = [{
         name: "shramik",
         age: 18,
@@ -48,19 +34,63 @@
         joining: 2004
     },
     {
-        name: "Sujit",
+        name: "sujit",
         age: 21,
         stream: "Arts",
         rollno: 4,
         joining: 2005
     }
-];
-
+];  
+    data = "";
+    data +="<tr>";
     for(i=0; i<students.length; i++){
+        data += "<td>" + students[i].stream + "</td>";
         let stud = students[i];
-        console.log(stud);
+        console.log(stud);      
     }
+    data +="</tr>"
+    document.getElementById("result").innerHTML = data;
+    
+        // let employee =[{
+        //     name : "Shramik",
+        //     rollno : 17,
+        //     age : 21,
+        //     stream : "BscIT"
+        // },
+        // {
+        //     name : "Niyati",
+        //     rollno : 18,
+        //     age : 23,
+        //     stream : "BscIT"
+        // },
+        // {
+        //     name : "Anuja",
+        //     rollno : 19,
+        //     age : 20,
+        //     stream : "BscIT"
+        // },
+        // {
+        //     name : "Rahul",
+        //     rollno : 20,
+        //     age : 24,
+        //     stream : "BscIT"
+        // },
+        // {
+        //     name : "Sujit",
+        //     rollno : 19,
+        //     age : 22,
+        //     stream : "BscIT"
+        // }];
 
+        // data = "";
+        // data += "<tr>";
+        //     for (let i=0 ; i < employee.length ; i++){
+        //         data += "<td>" + i + "</td>";
+        //         emp = employee[i];
+        //         console.log(employee.name);
+        //     }
+        // data +="</tr>";
+        // document.getElementById("result").innerHTML=data;
     </script>
 </body>
 </html>
